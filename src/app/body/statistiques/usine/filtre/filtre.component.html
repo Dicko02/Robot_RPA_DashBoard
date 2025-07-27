@@ -1,0 +1,29 @@
+<div class="globalStatistique">
+    <div class="filter">
+        <div class="filter-title">
+            <mat-icon class="find-in-page">find_in_page</mat-icon>
+            <p class="p-filter">Filtre</p>
+        </div>
+        <mat-form-field appearance="fill">
+            <mat-label></mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Start date" [(ngModel)]="startDate">
+            <input matEndDate placeholder="End date" [(ngModel)]="startDate">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker touchUi #picker></mat-date-range-picker>
+        </mat-form-field>
+    </div>
+    
+    <div class="filter-footer">
+        <button (click)="active()" class="recherche">
+            Recherche
+        </button>
+    </div>
+    
+    <div class="statistique">
+        <app-latence [OVTOLatence]="OVTO" [OVBLatence]="OVB" [OVALatence]="OVA"/>
+        <app-taux-efficacite [barLabels]="labels" [barData]="barData"/>
+        <app-repartition [polarLabels]="labels" [polarData]="polarData"/>
+    </div>
+</div>

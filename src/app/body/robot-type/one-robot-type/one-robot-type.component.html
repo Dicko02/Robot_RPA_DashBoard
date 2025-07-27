@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="element1">
+        <mat-icon matPrefix class="icon">desktop_mac</mat-icon>
+        @if (robot && robot.type){
+            <p class="type">{{ robot.type }}</p>
+        }
+    </div>
+
+    <div class="element_2-3">
+        <div class="element2">
+            <mat-icon matPrefix>date_range</mat-icon>
+            <p>{{ robot.date | date: 'dd/MM/yyyy' }}</p>
+            <p class="total">{{ robot.total }}</p>
+        </div>
+        
+        <div class="element3">
+            <p class="p1">
+                {{ robot.waiting }}
+                <span>
+                    <mat-icon matPrefix>more_horiz</mat-icon>
+                </span> 
+            </p>
+            <p class="p2">
+                {{ robot.achieved }}
+                <span>
+                    <mat-icon matPrefix>done</mat-icon>
+                </span> 
+            </p>
+            <p class="p3">
+                {{ robot.failed }}
+                <span>
+                    <mat-icon matPrefix>close</mat-icon>
+                </span> 
+            </p>
+        </div>
+    </div>
+    
+</div>

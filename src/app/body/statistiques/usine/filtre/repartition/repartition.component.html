@@ -1,0 +1,17 @@
+<div class="polar">
+
+    <div class="titre">
+        <mat-icon matPrefix class="icon">dashboard</mat-icon>
+            <p class="info">Repartition</p>
+        <mat-icon matPrefix class="icon" (click)="test()" class="MAJ">replay</mat-icon>
+    </div>
+
+    <div class="diagramme">
+        <canvas ngChartjs
+        [data]="polarAreaChartData"
+        [labels]="polarAreaChartLabels"
+        [legend]="polarAreaLegend"
+        [chartType]="polarAreaChartType"
+        (chartHover)="chartHovered($event)"></canvas>
+    </div>
+</div>

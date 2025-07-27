@@ -1,0 +1,26 @@
+.body {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    width: 90%;
+    background: white;
+    margin: auto;
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.canal{
+    z-index: 1; 
+    margin: 10px;
+}
+
+.statistique{
+    z-index: 2;
+    margin: 10px;
+
+}
+
+.tableau{
+    z-index: 3;
+    margin: 10px;
+}

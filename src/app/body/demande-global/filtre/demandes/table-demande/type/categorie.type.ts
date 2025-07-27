@@ -1,0 +1,1 @@
+export type categorie = 'GRAND_PUBLIC' | 'PROFESSIONNELS';

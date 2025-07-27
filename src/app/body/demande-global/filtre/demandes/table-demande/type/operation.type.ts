@@ -1,0 +1,1 @@
+export type operation = 'MI' | 'NA';
