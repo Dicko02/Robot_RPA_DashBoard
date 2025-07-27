@@ -1,0 +1,20 @@
+<div class="globalTable">
+    <div class="filtre">
+        <div class="filter-title">
+            <mat-icon class="find-in-page">find_in_page</mat-icon>
+            <p class="p-filter">Filtre</p>
+        </div>
+
+        <mat-form-field appearance="fill">
+            <mat-date-range-input [rangePicker]="picker" >
+                <input matStartDate placeholder="Start date" [(ngModel)]="startDate">
+                <input matEndDate placeholder="End date" [(ngModel)]="endDate">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker touchUi #picker></mat-date-range-picker>
+        </mat-form-field>
+    </div>
+    
+    <app-table-demande [fromDate]="startDate" [toDate]="endDate" class="table"/>
+    
+</div>
