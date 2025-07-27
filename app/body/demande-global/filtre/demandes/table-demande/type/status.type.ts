@@ -1,1 +1,0 @@
-export type status = 'En attente' | 'En Cours' | 'Succes';
